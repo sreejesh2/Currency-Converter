@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body style="background-color: black;">
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center">
+            <div class="d-flex">
+                <img src="./logo-removebg-preview.png" alt="">
+                <h1 class="text-center text-white p-5">Currency Convator</h1>
+            </div>
+            <div class="col-9 border border-3 p-4  rounded-4" style="box-shadow: rgba(247, 246, 246, 0.25) 0px 54px 55px, rgba(226, 223, 223, 0.12) 0px -12px 30px, rgba(224, 217, 217, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
+                <div class="d-flex justify-content-center p-3">
+                    <div class="row">
+                        
+                        <div class="col-12">
+                            <label class="text-white fs-4 mb-2 text-center" for=""><h4>Exchange Price</h4></label>
+                            <input class="form-control" id="id_amount" placeholder="Enter amount" type="text">
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-white my-3 ">
+                        <label class="ms-2" for=""> <h4>From</h4></label>
+                        <select id="from_currency" class="form-select" aria-label="Default select example" onchange="display(this)" name="fcode">
+                            <option selected>select currency</option>
+                          
+                          </select>
+                          <h4 class="text-center text-white mt-3" id="from_name"></h4>
+                    </div>
+                    <div class="col-6 text-white my-3">
+                        <label class="ms-2" for=""><h4>To</h4></label>
+                        <select id="to_currency" class="form-select" aria-label="Default select example" onchange="display(this)" name="tcode">
+                            <option selected>select currency</option>
+                            
+                          </select>
+                          <h4 class="text-center text-white mt-3" id="to_name"></h4>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-5">
+                            <button onclick="exchange()" class="form-control btn btn-outline-info my-5">submit</button>
+                        </div>
+                    </div>
+
+                    <h2 id="result" class="text-center text-white"></h2>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
